@@ -1,5 +1,6 @@
-1. User inputs a single word "no", and a list of words "on", which returns ["on"].
-2. User inputs a single word "no", and a list of words "sn", which returns an output of NULL.
-3. User inputs a single word "are", and a list of words "ear" and "era", which returns an output of ["ear", "era"].
-4. User inputs a single word "are", and a list of words "rat" and "pot", which returns an output of NULL
-5. User inputs a single word "are", and a list of words "rat" and "era", which returns an output of ["era"]
+1. User inputs a single word "a", and a list of words "a", which returns ["a"].
+2. User inputs a single word "no", and a list of words "on", which returns ["on"].
+3. User inputs a single word "no", and a list of words "sn", which returns an output of NULL.
+4. User inputs a single word "are", and a list of words "ear" and "era", which returns an output of ["ear", "era"].
+5. User inputs a single word "are", and a list of words "rat" and "pot", which returns an output of NULL
+6. User inputs a single word "are", and a list of words "rat" and "era", which returns an output of ["era"]
