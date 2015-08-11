@@ -4,12 +4,12 @@
     {
         function checkAnagram($input_single, $input_list)
         {
-            $input_array_of_letters = explode("", $input_single);
-            $output_anagram = array();
-            $input_array_of_listLetters = explode("", $input_list);
+            $output = '';
+            if ($input_single === $input_list) {
+                $output = $input_list;
+            }
+            return $output;
 
-            for each
-            return sort($input_anagram);
         }
     }
 
