@@ -60,6 +60,21 @@
             $this->assertEquals(["ear", "era"], $result);
         }
 
+        function test_checkAnagram_twoWordsMatchNoMatch() {
+
+            //Arrange
+            $test_AnagramGenerator = new AnagramGenerator;
+            $input_single = "are";
+            $input_list = ["pot", "rat"];
+
+            //Act
+            $result = $test_AnagramGenerator->checkAnagram($input_single, $input_list);
+
+            //Assert
+            $this->assertEquals([""], $result);
+        }
+
+
 
 
 
