@@ -9,25 +9,17 @@
             $inputArray = array();
             $exploded_single = str_split($input_single);
             sort($exploded_single);
-            $exploded_list = str_split($input_list);
-            sort($exploded_list);
 
-
-            if ($exploded_single === $exploded_list) {
-                $output = $input_list;
+            foreach ($input_list as $word) {
+                $exploded_word = str_split($word);
+                sort($exploded_word);
+                if ($exploded_single === $exploded_word) {
+                    array_push($output, $word);
+                }
             }
-            // if ($input_single != $input_list) {
-            //     $singleArray = str_split($input_single);
-            //     $inputArray = str_split($input_list);
-            //     $outputArray = array_diff ($singleArray, $inputArray);
-            //     if($outputArray != $input_single){
-            //         $output = '';
-            //     }
-            //
-            // }
 
-             else {
-                $output = "";
+            if ($output == array()) {
+                array_push($output, "");
             }
 
             return $output;

@@ -9,13 +9,13 @@
             //Arrange
             $test_AnagramGenerator = new AnagramGenerator;
             $input_single = "a";
-            $input_list = "a";
+            $input_list = ["a"];
 
             //Act
             $result = $test_AnagramGenerator->checkAnagram($input_single, $input_list);
 
             //Assert
-            $this->assertEquals("a", $result);
+            $this->assertEquals(["a"], $result);
         }
 
         function test_checkAnagram_twoLetterWord() {
@@ -23,27 +23,41 @@
             //Arrange
             $test_AnagramGenerator = new AnagramGenerator;
             $input_single = "on";
-            $input_list = "no";
+            $input_list = ["no"];
 
             //Act
             $result = $test_AnagramGenerator->checkAnagram($input_single, $input_list);
 
             //Assert
-            $this->assertEquals("no", $result);
+            $this->assertEquals(["no"], $result);
         }
 
-        function test_checkAnagram_twoLetterWord_noMatch() {
+        function test_checkAnagram_twoLetterWordNoMatch() {
 
             //Arrange
             $test_AnagramGenerator = new AnagramGenerator;
             $input_single = "on";
-            $input_list = "sn";
+            $input_list = ["sn"];
 
             //Act
             $result = $test_AnagramGenerator->checkAnagram($input_single, $input_list);
 
             //Assert
-            $this->assertEquals("", $result);
+            $this->assertEquals([""], $result);
+        }
+
+        function test_checkAnagram_twoWordsMatch() {
+
+            //Arrange
+            $test_AnagramGenerator = new AnagramGenerator;
+            $input_single = "are";
+            $input_list = ["ear", "era"];
+
+            //Act
+            $result = $test_AnagramGenerator->checkAnagram($input_single, $input_list);
+
+            //Assert
+            $this->assertEquals(["ear", "era"], $result);
         }
 
 
