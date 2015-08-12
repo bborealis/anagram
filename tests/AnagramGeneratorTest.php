@@ -60,7 +60,7 @@
             $this->assertEquals(["ear", "era"], $result);
         }
 
-        function test_checkAnagram_twoWordsMatchNoMatch() {
+        function test_checkAnagram_twoWordsNoMatch() {
 
             //Arrange
             $test_AnagramGenerator = new AnagramGenerator;
@@ -74,7 +74,33 @@
             $this->assertEquals([""], $result);
         }
 
+        function test_checkAnagram_twoWordsOneMatch() {
 
+            //Arrange
+            $test_AnagramGenerator = new AnagramGenerator;
+            $input_single = "are";
+            $input_list = ["pot", "era"];
+
+            //Act
+            $result = $test_AnagramGenerator->checkAnagram($input_single, $input_list);
+
+            //Assert
+            $this->assertEquals(["era"], $result);
+        }
+
+        function test_checkAnagram_complexWords() {
+
+            //Arrange
+            $test_AnagramGenerator = new AnagramGenerator;
+            $input_single = "weasel";
+            $input_list = ["selwea", "lewsae", "weasle", "chickens"];
+
+            //Act
+            $result = $test_AnagramGenerator->checkAnagram($input_single, $input_list);
+
+            //Assert
+            $this->assertEquals(["selwea", "lewsae", "weasle"], $result);
+        }
 
 
 

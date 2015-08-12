@@ -4,3 +4,4 @@
 4. User inputs a single word "are", and a list of words "ear" and "era", which returns an output of ["ear", "era"].
 5. User inputs a single word "are", and a list of words "rat" and "pot", which returns an output of ""
 6. User inputs a single word "are", and a list of words "rat" and "era", which returns an output of ["era"]
+7. User inputs a complex word--"weasel"--and a list of words--"selwea", "lewsae", "weasle", "chickens"--which returns an output of ["selwea", "lewsae", "weasle"]
