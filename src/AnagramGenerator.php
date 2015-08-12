@@ -7,7 +7,13 @@
             $output = array();
             $singleArray = array();
             $inputArray = array();
-            if ($input_single === $input_list) {
+            $exploded_single = str_split($input_single);
+            sort($exploded_single);
+            $exploded_list = str_split($input_list);
+            sort($exploded_list);
+
+
+            if ($exploded_single === $exploded_list) {
                 $output = $input_list;
             }
             // if ($input_single != $input_list) {
@@ -21,7 +27,7 @@
             // }
 
              else {
-                $output = $input_list;
+                $output = "";
             }
 
             return $output;
